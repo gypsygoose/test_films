@@ -1,0 +1,42 @@
+.city-switcher {
+  display: flex;
+  justify-content: flex-end;
+
+  &__field-name {
+    margin-right: $offset-small;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    color: $color-secondary;
+    transition: all $transition;
+
+    &:hover {
+      color: $color-text-dark;
+
+      .city-switcher__icon svg {
+        fill: $color-text-dark;
+      }
+    }
+
+    &_active {
+      .city-switcher__icon svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__current-city {
+  }
+
+  &__icon {
+    margin-left: $offset-small / 2;
+
+    svg {
+      height: 8px;
+      fill: $color-secondary;
+      transition: all $transition;
+    }
+  }
+}

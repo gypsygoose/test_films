@@ -1,0 +1,31 @@
+.films {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media #{$media-tablet-horizontal} {
+    flex-wrap: wrap;
+    margin-bottom: -$offset-large;
+  }
+
+  @media #{$media-mobile} {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  &__item {
+    width: 22.5%;
+
+    @media #{$media-tablet-horizontal} {
+      margin-bottom: $offset-large;
+      width: 45%;
+    }
+
+    @media #{$media-mobile} {
+      width: 100%;
+    }
+  }
+}

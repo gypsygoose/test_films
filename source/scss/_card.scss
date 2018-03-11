@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &__image {
+    margin-bottom: $offset-medium;
+    width: 100%;
+  }
+
+  &__content {
+    text-align: center;
+    color: $color-text-dark;
+  }
+
+  &__name {
+    margin-bottom: $offset-small;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1em;
+    color: $color-text-heading;
+  }
+
+  &__description {
+    margin-bottom: 0;
+    font-weight: 500;
+    line-height: 1.75em;
+    color: $color-text-grey; 
+  }
+}

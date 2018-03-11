@@ -1,0 +1,30 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $offset-button;
+  border-radius: $border-radius;
+  background-color: $color-primary;
+  color: $color-text-dark;
+  line-height: 1em;
+  transition: all $transition;
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-primary, 10%);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  &__caption {
+    white-space: nowrap;
+  }
+
+  &__icon {
+    margin-left: $offset-small / 2;
+
+    svg {
+      height: 8px;
+      fill: $color-text-dark;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+//Swiper
+@import "../css/swiper.css";
+
+@keyframes timer {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.slider {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100vh;
+
+  @media #{$media-tablet-vertical} {
+    height: calc(100vh - 136px);
+  }
+
+  @media #{$media-mobile} {
+    height: calc(100vh - 254.5px);
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__navigation {
+    position: absolute;
+    bottom: 105px;
+    right: 105px;
+    display: flex;
+    flex-direction: column;
+
+    @media #{$media-mobile} {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+
+  &__navigator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: $color-secondary;
+    transition: all $transition;
+    z-index: 100;
+
+    &:hover,
+    &:focus {
+      background-color: darken($color-secondary, 10%);
+      box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &_next {
+      margin-bottom: $offset-small;
+    }
+
+    &_prev {
+
+    }
+
+    svg {
+      height: 14px;
+      fill: $color-bg-white;
+    }
+  }
+
+  &__timer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: $color-primary;
+  }
+}
+
+.swiper-slide-active {
+  .slider__timer {
+    animation: timer 5s linear both;
+  }
+}

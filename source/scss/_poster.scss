@@ -1,0 +1,30 @@
+.poster {
+  width: 100%;
+  border-radius: $border-radius;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    border-radius: $border-radius;
+  }
+  
+  &__shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $border-radius;
+    background: linear-gradient(135deg, rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 60%);
+    z-index: 100;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-radius: $border-radius;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,31 @@
+section.slider.swiper-container
+  ul.slider__list.swiper-wrapper
+    li.slider__item.swiper-slide
+      a.slider__link(href="#")
+        img.slider__image(src="./images/movie-poster-max-1.jpg")
+        .slider__content-wrapper
+          .movie-info
+            p.movie-info__original-name.
+              Nuestros amantes
+            p.movie-info__name.
+              Наши любовники
+            p.movie-info__description.
+              Карлос — умный и привлекательный, но выглядит грустно, будто судьба совсем не балует его. Однажды он отправляется в книжный бар, чтобы впервые в жизни выпить бренди. Ирен — прирожденная выдумщица и завсегдатай этого места.
+        .slider__timer 
+    li.slider__item.swiper-slide
+      a.slider__link(href="#")
+        img.slider__image(src="./images/movie-poster-max-2.jpg")
+        .slider__content-wrapper
+          .movie-info
+            p.movie-info__original-name.
+              Game Night
+            p.movie-info__name.
+              Ночные игры
+            p.movie-info__description.
+              История Макса и Энни, которые вместе с другими парами каждую неделю устраивают так называемые «ночные игры». И вот однажды харизматичный брат Макса Брукс организовывает вечер по разгадыванию «убийственного» квеста с «ряжеными» головорезами и агентами ФБР. Получается, похищение Брукса в тот вечер — это розыгрыш… или нет?
+        .slider__timer 
+  .slider__navigation
+    button.slider__navigator.slider__navigator_next(type="button")
+      include ../images/right-arrow.svg
+    button.slider__navigator.slider__navigator_prev(type="button")
+      include ../images/left-arrow.svg

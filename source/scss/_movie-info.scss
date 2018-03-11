@@ -1,0 +1,48 @@
+.movie-info {
+  position: absolute;
+  bottom: 105px;
+  left: 105px;
+  width: 50%;
+  color: $color-text-white;
+
+  @media #{$media-mobile} {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  @media #{$media-mobile} {
+    width: calc(100% - #{$offset-medium} * 3 - 52px);
+  }
+
+  &__original-name {
+    margin-bottom: $offset-small;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1em;
+    color: $color-primary;
+  }
+
+  &__name {
+    margin-left: -6px;
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 1em;
+
+    @media #{$media-mobile} {
+      margin-bottom: 0;
+      margin-left: 0;
+      font-size: 30px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 2em;
+
+    @media #{$media-mobile} {
+      display: none;
+    }
+  }
+}

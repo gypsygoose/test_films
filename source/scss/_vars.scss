@@ -1,0 +1,40 @@
+// Variables
+// Offsets
+$offset-large: 30px;
+$offset-medium: 20px;
+$offset-small: 10px;
+$offset-button: 15px 20px;
+// Border radius
+$border-radius: 10px;
+// Page colors
+$color-bg-main: #f7f7f7;
+$color-bg-white: #fff;
+$color-bg-grey: #f0f0f0;
+$color-primary: #ffdd2d;
+$color-secondary: #0552b4;
+$color-text-white: #fff;
+$color-text-dark: #000;
+$color-text-grey: #666;
+$color-text-heading: #222220;
+// Transitions
+$transition: 0.20s ease-in-out;
+// Fonts
+$font-main: "Montserrat", Arial, Helvetica, sans-serif;
+$font-side: "Gotham Pro", Arial, Helvetica, sans-serif;
+$font-size-2xs: 0.354em;
+$font-size-xs: 0.5em;
+$font-size-s: 0.707em;
+$font-size-m: 1em;
+$font-size-l: 1.414em;
+$font-size-xl: 1.999em;
+$font-size-2xl: 2.827em;
+$font-size-3xl: 3.998em;
+// Line height
+$line-height: 2.2em;
+// Media queries
+$media-monitor: "screen and (max-width: 2559px)";
+$media-laptop-wide: "screen and (max-width: 1919px)";
+$media-laptop: "screen and (max-width: 1679px)";
+$media-tablet-horizontal: "screen and (max-width: 1279px)";
+$media-tablet-vertical: "screen and (max-width: 1023px)";
+$media-mobile: "screen and (max-width: 767px)";

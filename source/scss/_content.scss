@@ -1,0 +1,36 @@
+.section {
+  padding: $offset-large * 3;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media #{$media-mobile} {
+    padding: $offset-large $offset-small;
+  }
+
+  &_grey {
+    background-color: $color-bg-grey;
+  }
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $offset-large;
+
+  @media #{$media-mobile} {
+    flex-direction: column;
+  }
+
+  > * {
+    @media #{$media-mobile} {
+      margin-bottom: $offset-medium;
+    }
+  }
+
+  > *:last-child {
+    @media #{$media-mobile} {
+      margin-bottom: 0;
+    }
+  }
+}

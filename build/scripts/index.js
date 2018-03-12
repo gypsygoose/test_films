@@ -60,37 +60,73 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "./images/movie-poster-1.png";
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./images/movie-poster-2.png";
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./images/movie-poster-3.png";
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./images/movie-poster-4.png";
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./images/movie-poster-max-1.jpg";
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./images/movie-poster-max-2.jpg";
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
 (function () {
   'use strict';
   
   // Include main page
-  __webpack_require__(1);
+  __webpack_require__(7);
 
   // Include styles
-  __webpack_require__(2);
+  __webpack_require__(8);
 
   // Include favicon
   // require('../favicon.ico');
 
   // Include js-modules
-  var req = __webpack_require__(3);
+  var req = __webpack_require__(9);
   req.keys().forEach(function(key){
     req(key);
   });
   // Include fonts
-  var req = __webpack_require__(7);
+  var req = __webpack_require__(13);
   req.keys().forEach(function(key){
     req(key);
   });
   // Include images
-  var req = __webpack_require__(18);
+  var req = __webpack_require__(24);
   req.keys().forEach(function(key){
     req(key);
   });
@@ -104,24 +140,24 @@
 
 
 /***/ }),
-/* 1 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "../index.html";
 
 /***/ }),
-/* 2 */
+/* 8 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 3 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./_films.js": 4,
-	"./_slider.js": 5
+	"./_films.js": 10,
+	"./_slider.js": 11
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -137,10 +173,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 3;
+webpackContext.id = 9;
 
 /***/ }),
-/* 4 */
+/* 10 */
 /***/ (function(module, exports) {
 
 ;$(function() {
@@ -154,7 +190,7 @@ webpackContext.id = 3;
     var theta = Math.atan2(dy, dx); //angle between cursor and center of poster in RAD
     var angle = theta * 180 / Math.PI - 90; //convert rad in degrees
     var offsetPoster = 15;
-    var transformPoster = 'translateY(' + -offsetX * 2 + 'px) rotateX(' + (-offsetY * offsetPoster) + 'deg) rotateY(' + (offsetX * (offsetPoster * 2)) + 'deg)'; //poster transform
+    var transformPoster = 'translateY(' + -offsetX * 2 + 'px) rotateX(' + (-offsetY * offsetPoster) + 'deg) rotateY(' + (offsetX * (offsetPoster * 3)) + 'deg) scale(1.1) translateZ(10px)'; //poster transform
 
     //get angle between 0-360
     if (angle < 0) {
@@ -168,15 +204,29 @@ webpackContext.id = 3;
     poster.css('transform', transformPoster);
 
   });
+  $('.poster').mouseenter(function() {
+    var poster = $(this).find('.poster__wrapper');
+    var shine = $(this).find('.poster__shine');
+    poster.css('transition', 'transform 0.1s').css('transform', 'translateY(0) rotateX(0) rotateY(0) scale(1) translateZ(0)');
+    setTimeout(() => {
+      poster.css('transition', '');
+    }, 100);
+  });
+  $('.poster').mouseleave(function() {
+    var poster = $(this).find('.poster__wrapper');
+    var shine = $(this).find('.poster__shine');
+    poster.css('transition', 'transform 0.1s').css('transform', 'translateY(0) rotateX(0) rotateY(0) scale(1) translateZ(0)');
+    shine.css('background', '');
+  });
 });
 
 /***/ }),
-/* 5 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;$(function() {
   // Require swiper.js
-  __webpack_require__(6);
+  __webpack_require__(12);
   // Init slider
   var mainSlider = new Swiper('.slider', {
     autoplay: 5000,
@@ -186,7 +236,7 @@ webpackContext.id = 3;
 });
 
 /***/ }),
-/* 6 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
   /**
@@ -5543,20 +5593,20 @@ else if (typeof define === 'function' && define.amd) {
 //# sourceMappingURL=maps/swiper.js.map
 
 /***/ }),
-/* 7 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./GothamPro-Bold.woff": 8,
-	"./GothamPro-Bold.woff2": 9,
-	"./GothamPro-Medium.woff": 10,
-	"./GothamPro-Medium.woff2": 11,
-	"./Montserrat-Bold.woff": 12,
-	"./Montserrat-Bold.woff2": 13,
-	"./Montserrat-Medium.woff": 14,
-	"./Montserrat-Medium.woff2": 15,
-	"./Montserrat-Regular.woff": 16,
-	"./Montserrat-Regular.woff2": 17
+	"./GothamPro-Bold.woff": 14,
+	"./GothamPro-Bold.woff2": 15,
+	"./GothamPro-Medium.woff": 16,
+	"./GothamPro-Medium.woff2": 17,
+	"./Montserrat-Bold.woff": 18,
+	"./Montserrat-Bold.woff2": 19,
+	"./Montserrat-Medium.woff": 20,
+	"./Montserrat-Medium.woff2": 21,
+	"./Montserrat-Regular.woff": 22,
+	"./Montserrat-Regular.woff2": 23
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -5572,82 +5622,82 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 7;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./fonts/GothamPro-Bold.woff";
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./fonts/GothamPro-Bold.woff2";
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./fonts/GothamPro-Medium.woff";
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./fonts/GothamPro-Medium.woff2";
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./fonts/Montserrat-Bold.woff";
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./fonts/Montserrat-Bold.woff2";
+webpackContext.id = 13;
 
 /***/ }),
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "./fonts/Montserrat-Medium.woff";
+module.exports = __webpack_require__.p + "./fonts/GothamPro-Bold.woff";
 
 /***/ }),
 /* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "./fonts/Montserrat-Medium.woff2";
+module.exports = __webpack_require__.p + "./fonts/GothamPro-Bold.woff2";
 
 /***/ }),
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "./fonts/Montserrat-Regular.woff";
+module.exports = __webpack_require__.p + "./fonts/GothamPro-Medium.woff";
 
 /***/ }),
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "./fonts/Montserrat-Regular.woff2";
+module.exports = __webpack_require__.p + "./fonts/GothamPro-Medium.woff2";
 
 /***/ }),
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "./fonts/Montserrat-Bold.woff";
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./fonts/Montserrat-Bold.woff2";
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./fonts/Montserrat-Medium.woff";
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./fonts/Montserrat-Medium.woff2";
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./fonts/Montserrat-Regular.woff";
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./fonts/Montserrat-Regular.woff2";
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var map = {
-	"./angle-arrow-down.svg": 19,
-	"./circle-bg.png": 20,
-	"./left-arrow.svg": 21,
-	"./movie-poster-1.png": 22,
-	"./movie-poster-2.png": 23,
-	"./movie-poster-3.png": 24,
-	"./movie-poster-4.png": 25,
-	"./movie-poster-max-1.jpg": 26,
-	"./movie-poster-max-2.jpg": 27,
+	"./angle-arrow-down.svg": 25,
+	"./circle-bg.png": 26,
+	"./left-arrow.svg": 27,
+	"./movie-poster-1.png": 0,
+	"./movie-poster-2.png": 1,
+	"./movie-poster-3.png": 2,
+	"./movie-poster-4.png": 3,
+	"./movie-poster-max-1.jpg": 4,
+	"./movie-poster-max-2.jpg": 5,
 	"./right-arrow.svg": 28
 };
 function webpackContext(req) {
@@ -5664,61 +5714,25 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 18;
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./images/angle-arrow-down.svg";
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./images/circle-bg.png";
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./images/left-arrow.svg";
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./images/movie-poster-1.png";
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./images/movie-poster-2.png";
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "./images/movie-poster-3.png";
+webpackContext.id = 24;
 
 /***/ }),
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "./images/movie-poster-4.png";
+module.exports = __webpack_require__.p + "./images/angle-arrow-down.svg";
 
 /***/ }),
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "./images/movie-poster-max-1.jpg";
+module.exports = __webpack_require__.p + "./images/circle-bg.png";
 
 /***/ }),
 /* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "./images/movie-poster-max-2.jpg";
+module.exports = __webpack_require__.p + "./images/left-arrow.svg";
 
 /***/ }),
 /* 28 */
